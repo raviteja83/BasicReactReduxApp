@@ -1,0 +1,74 @@
+.gradient-loader {
+    background: white;
+    padding: 12px 0;
+    max-width: 60%;
+    min-height: 45px;
+  }
+  .gradient-loader .animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+    background-size: 800px 104px;
+    height: 45px;
+    position: relative;
+  }
+  .gradient-loader--single-line {
+    display: inline;
+  }
+  .gradient-loader--single-line .animated-background {
+    display: inline-block;
+    height: 8px;
+    width: 250px;
+  }
+  .gradient-loader .background-masker {
+    background: white;
+    position: absolute;
+  }
+  .gradient-loader .background-masker.first-end, .gradient-loader .background-masker.second-end, .gradient-loader .background-masker.second-line, .gradient-loader .background-masker.third-end, .gradient-loader .background-masker.third-line, .gradient-loader .background-masker.top {
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 10px;
+  }
+  .gradient-loader .background-masker.top {
+    height: 60px;
+    top: 0;
+  }
+  .gradient-loader .background-masker.first-end, .gradient-loader .background-masker.second-end, .gradient-loader .background-masker.third-end {
+    width: auto;
+    left: 55%;
+    top: 0;
+    height: 8px;
+    right: 0;
+  }
+  .gradient-loader .background-masker.second-line {
+    top: 8px;
+  }
+  .gradient-loader .background-masker.second-end {
+    left: 70%;
+    top: 18px;
+  }
+  .gradient-loader .background-masker.third-line {
+    top: 26px;
+  }
+  .gradient-loader .background-masker.third-end {
+    left: 45%;
+    top: 45px;
+  }
+  .gradient-loader--indented {
+    margin-top: 8px;
+    margin-left: 20px;
+  }
+  @keyframes placeHolderShimmer {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  

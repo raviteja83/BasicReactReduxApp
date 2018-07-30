@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import StudentsTable from '../components/StudentsTable';
+import GradientLoader from '../components/GradientLoader';
 
 import {
     selectStudentsLoading,
@@ -13,7 +14,7 @@ import {
 
 const StudentsContainer = ({ loading, data }) => (
     <div className="students-container">
-        {loading ? '' : <StudentsTable data={data} />}
+        {loading ? <GradientLoader /> : <StudentsTable data={data} />}
     </div>
 );
 
